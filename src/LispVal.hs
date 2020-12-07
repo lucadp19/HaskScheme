@@ -62,7 +62,7 @@ showVal = \case
     Nil             -> "Nil"
     List contents   -> T.concat [ "[", showContents contents, "]"]
     Fun _           -> "<Primitive function>"
-    Lambda _ _         -> "<Lambda>"
+    Lambda _ _      -> "<Lambda>"
 
 showContents :: [LispVal] -> T.Text
 showContents contents = T.intercalate ", " $ showVal <$> contents
